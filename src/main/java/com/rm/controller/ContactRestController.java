@@ -26,6 +26,7 @@ public class ContactRestController {
     //Rest Call for get one contact based on Id
     @GetMapping("/oneContact/{id}")
     public ResponseEntity<ContactEntity> getOneContactById(@PathVariable Integer id){
+        System.out.println("Hello");
         ContactEntity cont=contactService.getOneContactById(id);
         return ResponseEntity.ok(cont);
     }
